@@ -77,3 +77,5 @@ gem "vite_ruby"
 gem "foreman", "~> 0.87.2"
 
 gem "rename", "~> 1.0"
+
+gem "htmlbeautifier", "~> 1.4"
