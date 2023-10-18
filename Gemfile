@@ -56,6 +56,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "htmlbeautifier", "~> 1.4"
+  gem "erb-formatter", "~> 0.4.3"
+  gem "foreman", "~> 0.87.2"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -70,14 +73,12 @@ group :test do
   gem "selenium-webdriver"
 
 end
-gem "ruby-lsp"
+
 
 gem "vite_rails"
 gem "vite_ruby"
-gem "foreman", "~> 0.87.2"
 
 gem "rename", "~> 1.0"
 
-gem "htmlbeautifier", "~> 1.4"
 
-gem "erb-formatter", "~> 0.4.3"
+gem "ruby-lsp", "~> 0.11.2"
