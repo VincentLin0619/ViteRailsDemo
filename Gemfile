@@ -79,3 +79,5 @@ gem "foreman", "~> 0.87.2"
 gem "rename", "~> 1.0"
 
 gem "htmlbeautifier", "~> 1.4"
+
+gem "erb-formatter", "~> 0.4.3"
