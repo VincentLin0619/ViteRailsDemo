@@ -1,19 +1,20 @@
 <h1>註冊頁面</h1>
-<div class="form">
-  <%= form_with model: @user, url: user_index_path do |f|%>
-    <%= render "user/helpers/error_msg" %>
-    <div class="form-field flex">
+<div class="w-full max-w-xs m-auto">
+  <%= form_with model: @user, url: user_index_path, class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" do |f|%>
+    <div class="form-field mb-4">
       <%= form_group_for f, :nick_name, label: "用戶暱稱" do %>
-        <%= f.text_field :nick_name %>
+        <%= f.text_field :nick_name, class: "shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{f.object.errors.present? : 'border-red-500' ? 'border-blue-100'}" %>
       <% end %>
     </div>
-    <div class="form-field flex">
-      <%= f.label :email, "信箱" %>
-      <%= f.text_field :email %>
+    <div class="form-field mb-4">
+      <%= form_group_for f, :email, label: "信箱" do %>
+        <%= f.email_field :email, class: "shadow appearance-none border border-blue-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{"border-red-500" if f.object.errors.present? }" %>
+      <% end %>
     </div>
-    <div class="form-field flex">
-      <%= f.label :password, "密碼" %>
-      <%= f.text_field :password %>
+    <div class="form-field mb-4">
+      <%= form_group_for f, :password, label: "密碼" do %>
+        <%= f.password_field :password, class: "shadow appearance-none border border-blue-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{"border-red-500" if f.object.errors.present? }" %>
+      <% end %>
     </div>
     <%= f.submit "註冊", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
   <% end %>
