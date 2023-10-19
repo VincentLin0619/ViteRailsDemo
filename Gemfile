@@ -82,3 +82,5 @@ gem "rename", "~> 1.0"
 
 
 gem "ruby-lsp", "~> 0.11.2"
+
+gem "rails-i18n", "~> 7.0"

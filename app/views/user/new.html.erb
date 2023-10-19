@@ -1,5 +1,19 @@
 <h1>註冊頁面</h1>
-<%= form_with @user, user_index_path do |f|%>
-  <%= f.label "使用者暱稱" , :nick_name %>
-  <%= f.text_field :nick_name %>
-<% end %>
+<div class="form-feild">
+  <%= form_with model: @user, url: user_index_path do |f|%>
+    <%= render "user/helpers/error_msg" %>
+    <div class="form-field">
+      <%= f.label :nick_name, "使用者暱稱" %>
+      <%= f.text_field :nick_name %>
+    </div>
+    <div class="form-field">
+      <%= f.label :email, "信箱" %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="form-field">
+      <%= f.label :password, "密碼" %>
+      <%= f.text_field :password %>
+    </div>
+    <%= f.submit "註冊", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+  <% end %>
+</div>
