@@ -1,1 +1,4 @@
 @import "../../assets/stylesheets/application.css";
+
+/* error-message */
+@import "./style/error.css";

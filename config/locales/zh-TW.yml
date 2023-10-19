@@ -12,7 +12,7 @@ zh-TW:
         sign_in_count: 登入次數
         state: 狀態
         updated_at: 更新時間
-        nick_name: 用戶名
+        nick_name: 用戶暱稱
     errors:
       messages:
         record_invalid: 校驗失敗：%{errors}
