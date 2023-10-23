@@ -12,14 +12,12 @@
       <% end %>
     </div>
     <div class="form-field mb-4" >
-      <%= form_group_for f, :password, label: "密碼" do %>
+      <%= form_group_for f, :password_digest, label: "密碼" do %>
         <div data-controller="toggle"  class="relative w-full">
           <div class="absolute inset-y-0 right-0 flex items-center px-2">
             <label data-action="click->toggle#toggle" class="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label" id="password-label" for="toggle">show</label>
-            <input class="hidden js-password-toggle" type="checkbox" />
           </div>
-          <input class="shadow appearance-none border border-blue-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline #{"border-red-500" id="password-field" type="password" autocomplete="off"
-    />
+          <%= f.password_field :password_digest, class: "shadow appearance-none border border-blue-100 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline", id: "password-field" %>
         </div>
       <% end %>
     </div>
