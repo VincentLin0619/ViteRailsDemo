@@ -16,11 +16,20 @@ class UserController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def destroy
+
   end
 
   private
   def user_params
-    params.require(:user).permit(:nick_name, :email, :password_digest, :role)
+    params.require(:user).permit(:nick_name, :email, :password, :role)
   end
 
 
